@@ -22,6 +22,7 @@ jobs:
           pip install plotly
           pip install matplotlib
           pip install spotipy
+          pip install scikit_learn
           
           
 
