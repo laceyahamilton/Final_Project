@@ -26,6 +26,9 @@ jobs:
           pip install python-dotenv
           pip install requests
           pip install xgboost
+          pip install seaborn
+          pip install pandas
+          pip install numpy
           
           
 
