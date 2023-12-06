@@ -264,7 +264,7 @@ with recommendation_tab:
     load_dotenv()
 
     CLIENT_ID = os.getenv("SPOTIPY_CLIENT_ID")
-    CLIENT_SECRET = os.getenv("SPOTIPY_CLIENT_SECRE")
+    CLIENT_SECRET = os.getenv("SPOTIPY_CLIENT_SECRET")
     sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id=CLIENT_ID, client_secret=CLIENT_SECRET))
 
 
