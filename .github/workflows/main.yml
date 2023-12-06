@@ -23,6 +23,9 @@ jobs:
           pip install matplotlib
           pip install spotipy
           pip install scikit_learn
+          pip install python-dotenv
+          pip install requests
+          pip install xgboost
           
           
 
