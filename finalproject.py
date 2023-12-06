@@ -262,8 +262,10 @@ with recommendation_tab:
     st.write("Using Spotify's API, here a recommendation system based on your desired input. You have the option of getting a recommended song based on a Song+Artist input, getting the top 5 songs based on a selected genre, and getting similar artists based on a select artist. This is coming from Spotify so if you're favorite artist is in Spotify, you should be able to search it. Test it out bel")
 
     load_dotenv()
-    sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id=SPOTIPY_CLIENT_ID, client_secret=SPOTIPY_CLIENT_SECRET))
-
+    sp = spotipy.Spotify(client_credentials_manager=spotipy.oauth2.SpotifyClientCredentials(
+    client_id=os.environ["SPOTIPY_CLIENT_ID"],
+    client_secret=os.environ["SPOTIPY_CLIENT_SECRET"]
+))
 
     def recommend_songs_by_track(song_name, artist_name):
         results = sp.search(q=f'track:"{song_name}" artist:"{artist_name}"', type='track', limit=1)
