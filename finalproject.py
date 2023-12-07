@@ -26,7 +26,7 @@ st.image("playlists.jpg")
 st.subheader("Using playlists with your favorite song to recommend new songs to you.")
  
  #tabs
-intro_tab, dataset_tab, artist_tab, classification_tab, recommendation_tab, bio_tab = st.tabs(["Introduction", "About the Dataset", "Song Popularity", "Classification Methods", "Spotify API Recommendation", "About Me"])
+intro_tab, dataset_tab, artist_tab, classification_tab, recommendation_tab, conclusion_tab = st.tabs(["Introduction", "About the Dataset", "Song Popularity", "Classification Methods", "Spotify API Recommendation", "Conclusion"])
 
 with intro_tab:
     st.write("Once you find a song you like, you immediately replay it hundreds of times and immediately add it to a playlist with songs that feel the same. People make songs for different moods like sadness, happiness, or anger. Or they make playlists for activities like studying or driving to work. But to make those playlists you have to keep finding songs that match the purpose of the playlist. So for whatever application that you listen to music with, they should have a good recommendation system to give you more songs that you may enjoy. Here we are looking at Spotify playlists and using Spotify API to recommend new songs based on genres, artists and songs that you like or one that you would to get into.")
@@ -373,7 +373,11 @@ with recommendation_tab:
             get_top_tracks_by_genre(selected_genre)
 
 
-with bio_tab: 
+with conclusion_tab: 
+ st.title("Conclusion")
+ st.write("Based off of the results of the classifiers, we can see that distinguishing certain music genres are not all that easy. With XGBoost Classifier, the highest accracy acchieved was 45%. When the lines begin to blur, music genre starts become influenced by the individual's own taste and that is harder to detect. Using Spotify's API, you are able to input your favorite song, artist or browse through Spotify's genre's to find songs. Maybe with this app you can find some holiday songs that songs you have not heard before for the break. Happy listening!")
+ st.write("![Your Awsome GIF](https://giphy.com/gifs/headphones-spongebob-squarepants-tqfS3mgQU28ko)")
+
     st.write("My name is Lacey Hamilton and I am a graduate student in the M.S. of Data Science Program. One of my major hobbies is building legos. I often find that I need to be doing something physical as well as mental stimulation to stay sane so building legos keeps my hands occupied. The coding of this program and my time getting the neuroscience undergraduate degree was enough mental stimulation for a long time. I figure if decided not to go to college I would've been doing the opposite of what I am doing now: being like a carpenter and then doing a mentally stimulating activity for a hobby. Not to say legos aren't mentally stimulating but it is different from wondering why you keep getting errors with your code for 6 hours. Best of both worlds. Have a great holiday season and I will be busy building my Christmas lego set after this semester is over next week and getting a new puppy. :) ")
     st.image("lego.png")
 
