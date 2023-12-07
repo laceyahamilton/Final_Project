@@ -334,7 +334,7 @@ with recommendation_tab:
                 "Search by Genre"])
 
     if choose1 == "Search by Artist":
-        st.title('Artist Recommendations Based on Genres')
+        st.title('Artist Recommendations Based on Genre(s) of the Artist')
         artist_name_input = st.text_input('Enter an artist name:')
 
         if artist_name_input:
