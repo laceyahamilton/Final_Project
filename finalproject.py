@@ -81,7 +81,7 @@ with classification_tab:
             "XGBoost Classifier", "Neural Network"])
     if choose == "Decision Tree Classifier":
         st.title("Decision Tree")
-        st.write("It is a ML algorithm that recursively splits the dataset into subsets based on the most important feature at each node of the tree. Due to its hierarchical tree structure, each branch represent the outcome of that decision and each leaf node represents a final prediction. It can handle categorical and numerical features.")
+        st.write("Decision Tree is a ML algorithm that recursively splits the dataset into subsets based on the most important feature at each node of the tree. Due to its hierarchical tree structure, each branch represent the outcome of that decision and each leaf node represents a final prediction. It can handle categorical and numerical features.")
 
         features = ['danceability', 'speechiness', 'tempo']
         target_column = 'playlist_genre'
@@ -216,7 +216,7 @@ with classification_tab:
         st.text(classificationxg_rep)
     if choose == "Neural Network":
         st.title("Neural Network")
-        st.write("Another ML model used for solving complex problems like image recognition, natural language processing and classification tasks. Due to its powerful ability to learn intricate patterns from large amounts of data, it is applicable in a vast number of situations.")
+        st.write("Neural Network is another ML model used for solving complex problems like image recognition, natural language processing and classification tasks. Due to its powerful ability to learn intricate patterns from large amounts of data, it is applicable in a vast number of situations.")
         # Define features and target variable
         features = ['danceability', 'speechiness', 'tempo']
         target_variable = 'playlist_genre'
@@ -259,7 +259,7 @@ with classification_tab:
 
 with recommendation_tab:
     st.title('Spotify Track Recommender')
-    st.write("Using Spotify's API, here a recommendation system based on your desired input. You have the option of getting a recommended song based on a Song+Artist input, getting the top 5 songs based on a selected genre, and getting similar artists based on a select artist. This is coming from Spotify so if you're favorite artist is in Spotify, you should be able to search it. Test it out bel")
+    st.write("Using Spotify's API, here a recommendation system based on your desired input. You have the option of getting a recommended song based on a Song+Artist input, getting the top 5 songs based on a selected genre, and getting similar artists based on a select artist. This is coming from Spotify so if you're favorite artist is in Spotify, you should be able to search it. Test it out below")
 
     load_dotenv()
     sp = spotipy.Spotify(client_credentials_manager=spotipy.oauth2.SpotifyClientCredentials(
@@ -379,7 +379,8 @@ with conclusion_tab:
  
  gif_url = "https://media.giphy.com/media/tqfS3mgQU28ko/giphy.gif"
  st.image(gif_url)
-
+ 
+ st.title("About Me")
  st.write("My name is Lacey Hamilton and I am a graduate student in the M.S. of Data Science Program. One of my major hobbies is building legos. I often find that I need to be doing something physical as well as mental stimulation to stay sane so building legos keeps my hands occupied. The coding of this program and my time getting the neuroscience undergraduate degree was enough mental stimulation for a long time. I figure if decided not to go to college I would've been doing the opposite of what I am doing now: being like a carpenter and then doing a mentally stimulating activity for a hobby. Not to say legos aren't mentally stimulating but it is different from wondering why you keep getting errors with your code for 6 hours. Best of both worlds. Have a great holiday season and I will be busy building my Christmas lego set after this semester is over next week and getting a new puppy. :) ")
  st.image("lego.png")
 
